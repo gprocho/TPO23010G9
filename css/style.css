@@ -1,0 +1,235 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* height: 100%; */
+}
+
+body {
+    background-color:#e2e2e2; 
+}
+
+/*HEADER*/
+
+header {
+    background: white;
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 100%);
+    margin: .5rem 0 .2rem;
+}
+
+ .header nav {
+    display: flex;
+    justify-content: center;
+} 
+
+
+.header-nav a {
+    color: black;
+    padding: 1.5rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*HEADER Media nav*/
+@media screen and (max-width: 800px) {
+    .header-nav {
+        flex-direction: column;
+    }
+    .header-nav a {
+        padding: .3rem;
+    }
+}
+
+/*HEADER logo*/
+
+.header-logo {
+    margin-right: auto; 
+} 
+
+.header-nav .header-logo img {
+    height: 75px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header-nav .header-logo img:hover {
+    transform: scale(1.2);
+}
+
+/*HEADER menu*/
+
+.header-menu {
+    margin: 1.2rem 0 0;
+}
+
+.header-nav .header-menu:hover {
+    transform: scale(1.1);
+    color: rgb(236, 143, 22);
+}
+
+.header-button button {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+    padding: .8rem 2rem .8rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header-nav .header-button button:hover {
+    background-color: #f2d2a2;
+    color: rgb(236, 143, 22);
+    transform: scale(1.1);
+}
+
+/*MAIN*/
+.main img {
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    margin: .15rem 0 0;
+}
+
+.main-texto p{
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    text-align: center;
+    text-justify: center;
+    padding: 2rem 1rem 1rem;
+
+}
+
+.contenedor-home {
+    display: flex;
+    justify-content: space-between;
+    /* width: 60vw; */
+    height: auto;
+    margin: 5rem auto;
+    background-image: url("../img/ciudad\ byn.jpg");
+    /* background-repeat: no-repeat; */
+    background-size:contain
+}
+
+.bloque-home {
+    width: 90%;
+    min-height: 260px;
+    background-color:rgba(0, 0, 0, 70%);
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 70%);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    text-justify: center;
+    font-size: 2rem;
+    color: white;
+}
+.bloque-home p {
+    text-align: center;
+    text-justify: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem;
+}
+
+.bloque-home-button button{
+    margin-top: 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+    padding: .8rem 2rem .8rem;
+    background: #eceff1;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.bloque-home-button button:hover {
+    background-color: #f2d2a2;
+    color: rgb(236, 143, 22);
+    transform: scale(1.1);
+}
+
+/*Main Media bloques*/
+@media (max-width: 800px) {
+
+    .contenedor-home {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    .bloque-home {
+        min-height: 130px;
+        justify-content: center;
+    }
+
+}
+
+/*FOOTER*/
+footer {
+    background-color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    padding: 40px 0px;
+    align-items: center;
+}
+
+.footer-texto p{
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(88, 87, 86);
+}
+
+.footer-logo {
+    text-align: center;
+}
+.footer-logo img {
+    height: 100px;
+    width: auto;
+}
+
+.list-redes-sociales{
+    display: flex;
+    list-style: none;
+}
+  
+.item-redes-sociales img {
+    padding: 10px;
+    height: 50px;
+}
+
+/*Footer Media*/
+@media screen and (max-width: 800px) {
+    .footer-grid{
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+} 
+    
+/*CONTACTOS.HTML*/
+.formulario {
+    background-color: rgb(161, 159, 179);
+    padding: 1rem;
+    text-align: center;
+}
