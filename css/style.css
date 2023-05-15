@@ -57,6 +57,7 @@ header {
     height: 75px;
     width: auto;
     transition: all 0.3s;
+    margin-left: 1.2rem;
 }
 
 .header-nav .header-logo img:hover {
