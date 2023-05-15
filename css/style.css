@@ -233,3 +233,88 @@ footer {
     padding: 1rem;
     text-align: center;
 }
+
+
+/*HISTORIA.HTML*/
+.hym-principal {
+    background-color: rgb(161, 159, 179);
+    padding: 30px 0px;
+}
+
+.hym-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hym-detalle {
+    display: flex;
+    gap:10px;
+    background-color: #F2F2F2;
+    justify-content: space-around;
+    padding: 30px 0px;
+    border-radius: 10px;
+}
+
+.hym-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+    margin: 1rem;
+}
+  
+.hym-texto h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+  
+.hym-texto p {
+    font-size: 1rem;
+    margin: .25rem;
+    line-height: 1.1rem;
+}
+
+.hym-texto p b {
+    font-size: 1rem;
+    color: rgb(236, 143, 22);
+}
+
+.hym-iframe {
+    width: 35%;
+    height: 200px;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+    .hym-principal {
+    padding: 30px 20px;
+    }
+    .hym-container {
+        max-width: 650px;
+    }
+}
+
+/*  Celulares */
+@media screen and (max-width: 420px) {
+    .hym-container {
+        max-width: 320px;
+    }
+    .hym-detalle {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .hym-texto {
+        width: 100%;
+        padding: 0px 20px;
+    }
+    
+    .hym-iframe {
+        width: 90%;
+    }
+}
