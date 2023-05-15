@@ -102,14 +102,17 @@ header {
     margin: .15rem 0 0;
 }
 
-.main-texto p{
+.main-texto { 
+    margin: 1.5rem;
+} 
+
+.main-texto p {
     font-size: 2rem;
     color: black;
     position: relative;
     text-align: center;
     text-justify: center;
-    padding: 2rem 1rem 1rem;
-
+    padding: 1rem 1rem 1rem;
 }
 
 .contenedor-home {
@@ -244,14 +247,13 @@ footer {
 .hym-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .hym-detalle {
     display: flex;
-    gap:10px;
     background-color: #F2F2F2;
     justify-content: space-around;
     padding: 30px 0px;
