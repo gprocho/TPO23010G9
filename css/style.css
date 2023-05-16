@@ -5,6 +5,16 @@
     font-size: 1rem;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: "MonteCarlo";
+    src: url('../fonts/MonteCarlo/MonteCarlo-Regular.ttf');
+}
+
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* height: 100%; */
@@ -114,6 +124,7 @@ header {
     text-align: center;
     text-justify: center;
     padding: 1rem 1rem 1rem;
+    font-family: "Montserrat";
 }
 
 .contenedor-home {
@@ -193,16 +204,21 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     justify-items: center;
-    padding: 40px 0px;
+    padding: 30px 0px;
     align-items: center;
 }
 
 .footer-texto p{
     text-align: center;
-    padding: 1rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: rgb(88, 87, 86);
+    padding: .5rem;
+    margin-left: 2rem;
+    /* font-weight: 600; */
+    font-size: 1.7rem;
+    font-weight: 400;
+    /* color: rgb(88, 87, 86); */
+    font-family: "MonteCarlo";
+    word-spacing: 0.1rem;
+    letter-spacing: .05rem;
 }
 
 .footer-logo {
@@ -228,6 +244,9 @@ footer {
     .footer-grid{
         grid-template-columns: 1fr;
         padding: 1rem;
+    }
+    .footer-logo img {
+        margin: 1rem;
     }
 } 
     
