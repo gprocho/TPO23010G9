@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +10,29 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-<!-- Encabezado -->
+    <!-- Encabezado -->
     <header class="header">
         <nav class="header-nav">
             <a href="index.html" class="header-logo"><img src="img/Logo.png" alt="Logo"></a>
             <a href="index.html" class="header-menu">Inicio</a>
             <a href="paseos.html" class="header-menu">Paseos</a>
             <a href="atracciones.html" class="header-menu">Atracciones gratuitas</a>
-            <a href="historia.html"class="header-menu">Historias y música</a>
+            <a href="historia.html" class="header-menu">Historias y música</a>
             <a href="contacto.html" class="header-button"><button>Contacto</button></a>
         </nav>
     </header>
 
-<!-- Main - Contenido principal -->
+    <!-- Main - Contenido principal -->
     <main class="main">
         <img src="img/FOTO OBELISCO PANORAMICA.jpg" alt="Obelisco BA">
         <div class="main-texto">
-            <p>Les proponemos actividades para sentir y disfrutar Buenos Aires. <br> ¡Contactanos para obtener una experiencia completa!</p>
+            <p>Les proponemos actividades para sentir y disfrutar Buenos Aires. <br> ¡Contactanos para obtener una
+                experiencia completa!</p>
         </div>
     </main>
-<!-- Bloques información, varios -->
+    <!-- Bloques información, varios -->
     <section class="contenedor-home">
         <div class="bloque-home">
             <p> <br> ¡Diversión!<br><br> Las mejores actividades.</p>
@@ -38,18 +41,155 @@
             <p> Atención 24/7 <br><br>24 horas<br><br> Todos los días del año.</p>
         </div>
         <div class="bloque-home">
-            <p> <br> Seguridad<br><br> y<br><br> puntualidad.</p> 
+            <p> <br> Seguridad<br><br> y<br><br> puntualidad.</p>
         </div>
         <div class="bloque-home">
             <p>¡Contactanos!</p>
             <a href="contacto.html" class="bloque-home-button"><button>Contacto</button></a>
         </div>
     </section>
-<!-- Footer -->
+
+    <!-- Consumo de API clima y API cambio de moneda -->
+    <section class="apis-contenedor">
+        <section id="api-clima-axios" class="api-clima-ppal">
+            <div class="apis-title1">Clima en la ciudad de Buenos Aires</div>
+            <div class="api-clima-dias">
+                <div class="api-clima-actual">
+                    <h3 class="api-clima-title">Estado actual</h3>
+                    <div class="api-clima-description">
+                        <template v-if="datos.current_weather.weathercode === 0">
+                            <img src="img/APIClima_dianoche_e2.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Despejado</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 1">
+                            <img src="img/APIClima_dianoche_e2.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Despejado</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 2">
+                            <img src="img/APIClima_nubes_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Parcialmente nublado</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 3">
+                            <img src="img/APIClima_nublado_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Nublado</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 45">
+                            <img src="img/APIClima_niebla_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Niebla</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 51">
+                            <img src="img/APIClima_llovizna_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Llovizna</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 53">
+                            <img src="img/APIClima_llovizna_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Llovizna</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 55">
+                            <img src="img/APIClima_llovizna_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Llovizna</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 61">
+                            <img src="img/APIClima_lluvia_leve_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia leve</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 63">
+                            <img src="img/APIClima_lluvia-moderada_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia moderada</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 65">
+                            <img src="img/APIClima_lluvia_fuerte_tormenta_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia fuerte</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 56">
+                            <img src="img/APIClima_nube-de-nieve_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia helada</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 66">
+                            <img src="img/APIClima_nube-de-nieve_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia helada</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 67">
+                            <img src="img/APIClima_nube-de-nieve_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvia helada</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 80">
+                            <img src="img/APIClima_lluvia_leve_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvias leves</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 81">
+                            <img src="img/APIClima_lluvia-moderada_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvias moderadas</p>
+                        </template>
+                        <template v-else-if="datos.current_weather.weathercode === 82">
+                            <img src="img/APIClima_lluvia_fuerte_tormenta_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Lluvias fuertes</p>
+                        </template>
+                        <template v-else>
+                            <img src="img/APIClima_inestable_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Clima inestable</p>
+                        </template>
+                    </div>
+                    <div class="api-clima-temp">
+                        <div class="api-clima-temp-act">{{datos.current_weather.temperature}} <span
+                                class="api-clima-temp-act-det">°C</span></div>
+                        <div class="api-clima-temp-pron">
+                            <div class="min">
+                                <p class="api-clima-temp-pron-min">{{datos.daily.temperature_2m_min[0]}}°C</p>
+                                <p class="api-clima-min-texto">MIN estimada</p>
+                            </div>
+                            <div class="max">
+                                <p class="api-clima-temp-pron-max">{{datos.daily.temperature_2m_max[0]}}°C</p>
+                                <p class="api-clima-max-texto">MAX estimada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="api-clima-info">
+                        <p class="apis-texto">Viento: {{datos.current_weather.windspeed}} Km/h</p>
+                        <p class="apis-texto">UV índice máximo: {{datos.daily.uv_index_max[0]}} de 10</p>
+                        <p class="apis-texto">Probabilidad de lluvia: {{datos.daily.precipitation_probability_max[0]}} %
+                        </p>
+                    </div>
+                </div>
+                <div class="api-clima-pronostico">
+                    <h3 class="api-clima-title2">Pronóstico para mañana</h3>
+                    <div class="api-clima-temp-pron2">
+                        <div class="min">
+                            <p class="api-clima-temp-pron-min">{{datos.daily.temperature_2m_min[1]}}°C</p>
+                            <p class="api-clima-min-texto">MIN estimada</p>
+                        </div>
+                        <div class="max">
+                            <p class="api-clima-temp-pron-max">{{datos.daily.temperature_2m_max[1]}}°C</p>
+                            <p class="api-clima-max-texto">MAX estimada</p>
+                        </div>
+                    </div>
+                    <div class="api-clima-info2">
+                        <p class="apis-texto">Viento: {{datos.daily.windspeed_10m_max[1]}} Km/h</p>
+                        <p class="apis-texto">UV índice máximo: {{datos.daily.uv_index_max[1]}} de 10</p>
+                        <p class="apis-texto">Probabilidad de lluvia: {{datos.daily.precipitation_probability_max[1]}} %
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="api-cambio-axios" class="api-cambio-ppal">
+            <p class="apis-title2">Cambio $ ARS </p>
+            <p class="apis-title2">Cotizaciones</p>
+            <div class="api-cambio-valores">
+                <p class="api-cambio-tx1">Valor oficial promedio para la "COMPRA":</p>
+                <p>1 Dólar USD : &nbsp;&nbsp; {{datos.USDARS.bid}}&nbsp;ARS</p>
+                <p>1 Euro : &nbsp;&nbsp; {{datos.EURARS.bid}}&nbsp;ARS</p>
+                <p>1 Real : &nbsp;&nbsp; {{datos.BRLARS.bid}}&nbsp;ARS</p>
+                <p class="api-cambio-tx1">Actualizado al {{datos.USDARS.create_date}}</p>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-texto">
-                <p>Sentir, vivir y disfrutar Buenos Aires.</p> 
+                <p>Sentir, vivir y disfrutar Buenos Aires.</p>
                 <p>Los esperamos junto a nuestro equipo de guías.</p>
             </div>
             <div class="footer-logo">
@@ -72,10 +212,16 @@
                 </ul>
             </div>
         </div>
-       
     </footer>
-    
-</body>
 
+    <!-- cdn VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- cdn AXIOS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <!-- Archivo JavaScript -->
+    <script src="js/apiscyc.js"></script>
+
+</body>
 
 </html>

@@ -185,11 +185,13 @@ header {
         display: flex;
         padding: 0;
         flex-direction: column;
+        align-items: center;
     }
     
     .bloque-home {
         min-height: 130px;
         justify-content: center;
+        width: 90%;
     }
 
 }
@@ -508,4 +510,222 @@ footer {
     75%  {margin-left: -300%}
     95% {margin-left:-300%}
 }
+
+/*INDEX.HTML - APIs ----------------------------------------------------------------------------*/
+/* APIs clima y cambio */
+
+.apis-contenedor {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin: 5rem .5rem 2.5rem;
+    font-family: "Montserrat";
+}
+
+.apis-title1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: .5rem;
+}
+
+.api-clima-dias {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    justify-content: space-between;
+}
+
+.api-clima-actual {
+    display: grid;
+    grid-template: 20% 45% 35% / 40% 60%;
+    min-height: 260px;
+    background-color:rgb(245, 245, 245);
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 60%);
+    border-radius: .7rem;
+    padding: .5rem;
+    margin: 1rem;
+    text-align: center;
+    text-justify: center;
+    font-size: 1rem;
+    color: black; 
+}
+
+.api-clima-title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: .3rem;
+}
+
+.api-clima-title2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: .3rem;
+    margin-bottom: 5%;
+}
+
+.api-clima-description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-items: auto;
+}
+
+.api-clima-description img {
+    height: 90px;
+    width: auto;
+}
+
+.api-clima-temp {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.api-clima-temp-act {
+    font-size: 3.5rem;
+    color: rgb(118, 12, 139);
+}
+
+.api-clima-temp-act-det {
+    font-size: 2rem;
+}
+
+.api-clima-temp-pron {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.api-clima-temp-pron2 {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.min {
+    color:rgb(0, 102, 255);
+}
+
+.api-clima-temp-pron-min {
+    font-size: 1.5rem;
+}
+
+.api-clima-min-texto {
+    font-size: .9rem;
+    color:rgb(0, 102, 255);
+}
+
+.max {
+    color:rgb(221, 77, 10);
+}
+
+.api-clima-temp-pron-max {
+    font-size: 1.5rem;
+}
+
+.api-clima-max-texto {
+    font-size: .9rem;
+    color:rgb(221, 77, 10);
+}
+
+.api-clima-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: left;
+    padding-left: 4%;
+    justify-content: center;
+    padding-top: 1rem ;
+}
+
+.api-clima-info2 {
+    text-align: left;
+    padding-left: 4%;
+    justify-content: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    align-items: center;
+}
+
+.api-clima-pronostico {
+    background-color:rgb(245, 245, 245);
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 60%);
+    border-radius: .7rem;
+    padding: .5rem;
+    margin: 1rem;
+    text-align: center;
+    text-justify: center;
+    font-size: 1rem;
+    color: black;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.api-clima-ppal {
+    min-height: 260px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 60%);
+    border-radius: .7rem;
+    margin: .5rem;
+    text-align: center;
+    text-justify: center;
+    font-size: 1rem;
+    color: black;
+}  
+
+.api-cambio-ppal {
+    min-height: 230px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 60%);
+    border-radius: .7rem;
+    margin: .5rem;
+    text-align: center;
+    text-justify: center;
+    font-size: 1rem;
+    color: black;
+} 
+
+.apis-title2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: .5rem;
+    margin: 0;
+}
+
+.api-cambio-tx1 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .5rem;
+    margin: 0;
+}
+
+.api-cambio-valores {
+    align-items: center;
+    margin: 1.5% 0 2%;
+}
+
+.api-cambio-valores p{
+    padding-bottom: 2%;
+}
+
+
+/*Media APIs*/
+@media (max-width: 800px) {
+    .apis-contenedor {
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+    
+    .api-clima-dias {
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
