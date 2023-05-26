@@ -26,9 +26,18 @@ body {
 
 /*HEADER*/
 
+.respmenu input[type="checkbox"] {
+    opacity: 0;
+}
+
+.fa-bars, .fa-times {
+    display: none;
+}
+
 header {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center;  */
     background: white;
     box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 100%);
     margin: .5rem 0 .2rem;
@@ -38,13 +47,15 @@ header {
 
  .respmenu {
     display: flex;
-    justify-content: center;
-}
+    align-items: center;
+    /* justify-content: center; */
+} 
 
 .respmenu nav ul li{
     display: flex;
-    justify-content: center;
-}
+    align-items: center;
+    /* justify-content: center; */
+}  
 
 .header-nav a {
     color: black;
@@ -59,23 +70,16 @@ header {
     display: flex;
     gap: 0.2rem;
 }
-.nav-list li a {
+/* .nav-list li a {
     text-decoration: none;
     color: black;
-}
+} */
 
-.respmenu input[type="checkbox"] {
-    opacity: 0;
-}
-
-.fa-bars, .fa-times {
-    display: none;
-}
 
 /*HEADER logo*/
 
 .header-logo {
-    margin-right: auto;
+    margin-right: 3rem;
 }
 
 .header-logo img {
@@ -91,9 +95,9 @@ header {
 
 /*HEADER menu*/
 
-.header-menu {
+/* .header-menu {
     margin: 1.2rem 0 0;
-}
+} */
 
 .header-nav .header-menu:hover {
     transform: scale(1.1);
@@ -209,7 +213,8 @@ header {
 /*MAIN*/
 .main img {
     height: auto;
-    max-height: 500px;
+    max-height: 450px;
+    /* max-height: 500px; */
     width: 100%;
     margin: .15rem 0 0;
 }
