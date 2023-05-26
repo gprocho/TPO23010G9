@@ -83,10 +83,11 @@ header {
 }
 
 .header-logo img {
-    height: 75px;
+    height: 85px;
     width: auto;
     transition: all 0.3s;
     margin-left: 1.2rem;
+    margin-top: .8rem;
 }
 
 .header-logo img:hover {
