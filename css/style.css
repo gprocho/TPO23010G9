@@ -844,5 +844,16 @@ footer {
     }
 }
 
+/* Reservas.html */
 
+.reservas {
+    /* background-color: rgb(226, 236, 250); */
+    background-color: rgb(252, 240, 230);
+ }
+ 
+ .reservas-cont {
+     padding-bottom: 2rem;
+     
+ }
+ 
 

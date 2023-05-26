@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/L_Icono_logo_e2.ico" type="image/x-icon">
+    <title>Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a href="index.html" class="header-logo"><img src="img/L_logo_e1.png" alt="Logo"></a>
+        <div class="respmenu">
+            <input type="checkbox">
+            <img class="fas fa-bars" src="img/menu_e1.png" alt="menú">
+            <img class="fas fa-times" src="img/cerrarMB_e3.png" alt="cerrar">
+            <nav class="header-nav nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="header-menu">Inicio</a></li>
+                    <li><a href="paseos.html" class="header-menu">Paseos</a></li>
+                    <li><a href="atracciones.html" class="header-menu">Atracciones gratuitas</a></li>
+                    <li><a href="historia.html" class="header-menu">Historias y música</a></li>
+                    <li><a href="reservas.html" class="header-menu">Reservas</a></li>
+                    <li><a href="contacto.html" class="header-button"><button>Contacto</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main - Contenido principal -->
+    <main class="main">
+        <img src="img/PUERTO MADERO PANORAMICA.jpg" alt="Puerto Madero barco BA">
+        <div class="main-texto">
+            <p>Reservas</p>
+        </div>
+    </main>
+    <!-- Bloques información, varios -->
+    <section class="reservas">
+        <div class="main-texto">
+            <p>Formulario de Reserva:</p>
+        </div>
+        <div class="container reservas-cont">
+            <!--envia la información al correo BAturismoarg@mail.com Clave:BAturismo23-->
+            <form novalidate id="formulario" action="mailto:BAturismoarg@gmail.com" method="post" enctype="text/plain">
+
+                <div class="form-control mb-3">
+                    <label for="userDate">Fecha de salida (mm/dd/yyyy): </label>
+
+                    <input type="date" id="userDate" class="form-control" name="userDate"
+                        placeholder="Introduce una fecha">
+
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertDate"></p>
+
+
+                <div class="form-control mb-3">
+                    <label for="userPaseo" class="form-label">Paseos Disponibles:</label>
+                    <input list="userPaseos" placeholder="Elija un paseo" id="userPaseo" name="userPaseo"
+                        class="form-control">
+                    <datalist id="userPaseos">
+                        <option value="Show de Tango">
+                        <option value="Delta Tigre">
+                        <option value="Canchas de Fútbol">
+                        <option value="Postales de Buenos Aires">
+                    </datalist>
+                </div>
+
+                <p class="text-danger mb-3 d-none" id="alertPaseo"></p>
+
+                <div class="form-control mb-3">
+                    <label for="userPasaj">Cantidad de pasajeros:</label>
+                    <input type="text" name="userPasaj" class="form-control"
+                        placeholder="Ingrese cantidad de pasajeros.." id="userPasaj" min="0" max="100">
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertPasaj"></p>
+
+
+                <div class="form-control mb-3">
+                    <label for="userApellido">Apellido:</label>
+                    <input class="form-control mb-3" name="userApellido" placeholder="Ingrese su apellido"
+                        autocomplete="off" id="userApellido" type="text" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertApellido"></p>
+
+                <div class="form-control mb-3">
+                    <label for="userName">Nombre:</label>
+                    <input class="form-control mb-3" name="userName" placeholder="Ingrese su nombre" autocomplete="off"
+                        id="userName" type="text" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertName"></p>
+
+
+                <div class="form-control mb-3">
+                    <label for="userEmail">Correo Electrónico:</label>
+                    <input class="form-control mb-3" name="userEmail" placeholder="Ingrese su correo" id="userEmail"
+                        autocomplete="off" type="email" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertEmail"></p>
+
+
+                <div class="form-control mb-3">
+                    <label for="userTelef">Teléfono celular (+54 911 1234 1234):</label>
+                    <input class="form-control mb-3" name="userTelef" placeholder="Ingrese su número telefónico"
+                        id="userTelef" autocomplete="off" type="tel" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertTelef"></p>
+
+                <button type="submit" class="form-control btn btn-primary">Enviar</button> 
+                <br>
+                <br>
+
+                <button type="reset" class="btn btn-secondary">Borrar</button>
+
+                <a href="paseos.html" class="button" style="vertical-align:middle">
+                    <span>Volver</span></a>
+
+                <a href="contacto.html" class="button" style="vertical-align:middle">
+                    <span>Consultas</span></a>
+
+            </form>
+            <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-texto">
+                <p>Sentir, vivir y disfrutar Buenos Aires.</p>
+                <p>Los esperamos junto a nuestro equipo de guías.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"> <img src="img/L_logo_e1.png" alt="imagen logo"></a>
+            </div>
+            <div class="footer-redes-sociales">
+                <ul class="list-redes-sociales">
+                    <li class="item-redes-sociales">
+                        <a href="#"> <img src="img/Facebook.png" alt="Facebook"></a>
+                    </li>
+                    <li class="item-redes-sociales">
+                        <a href="#"> <img src="img/RS Instagram.jpeg" alt="Instagram"></a>
+                    </li>
+                    <li class="item-redes-sociales">
+                        <a href="#"> <img src="img/RS YouTube.png" alt="YouTube"></a>
+                    </li>
+                    <li class="item-redes-sociales">
+                        <a href="#"><img src="img/RS TikTok.png" alt="TikTok"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/formulario.js"></script>
+
+</body>
+
+</html>
