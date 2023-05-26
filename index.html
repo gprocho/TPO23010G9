@@ -35,18 +35,25 @@
     <!-- Bloques información, varios -->
     <section class="contenedor-home">
         <div class="bloque-home">
-            <p> <br> ¡Diversión!<br><br> Las mejores actividades.</p>
+            <p>¡Diversión!</p>
+            <p>¡Cultura!</p>
+            <p>¡Las mejores actividades!</p>
         </div>
         <div class="bloque-home">
-            <p> Atención 24/7 <br><br>24 horas<br><br> Todos los días del año.</p>
+            <p>Atención 24/7</p>
+            <p>24 horas</p>
+            <p>Todos los días del año</p>
         </div>
         <div class="bloque-home">
-            <p> <br> Seguridad<br><br> y<br><br> puntualidad.</p>
+            <p>Seguridad</p>
+            <p>y</p>
+            <p>experiencia</p>
         </div>
         <div class="bloque-home">
+            <p> </p>
             <p>¡Contactanos!</p>
             <a href="contacto.html" class="bloque-home-button"><button>Contacto</button></a>
-        </div>
+        </div>        
     </section>
 
     <!-- Consumo de API clima y API cambio de moneda -->
@@ -125,6 +132,10 @@
                             <img src="img/APIClima_lluvia_fuerte_tormenta_e1.png" alt="img clima" class="api-clima-img">
                             <p class="apis-texto">Lluvias fuertes</p>
                         </template>
+                        <template v-else-if="datos.current_weather.weathercode === 95">
+                            <img src="img/APIClima_lluvia_fuerte_tormenta_e1.png" alt="img clima" class="api-clima-img">
+                            <p class="apis-texto">Tormenta</p>
+                        </template>
                         <template v-else>
                             <img src="img/APIClima_inestable_e1.png" alt="img clima" class="api-clima-img">
                             <p class="apis-texto">Clima inestable</p>
@@ -173,7 +184,7 @@
             </div>
         </section>
         <section id="api-cambio-axios" class="api-cambio-ppal">
-            <p class="apis-title2">Cambio $ ARS </p>
+            <p class="apis-title1">Cambio $ ARS </p>
             <p class="apis-title2">Cotizaciones</p>
             <div class="api-cambio-valores">
                 <p class="api-cambio-tx1">Valor oficial promedio para la "COMPRA":</p>
