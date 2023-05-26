@@ -42,7 +42,7 @@ header {
     box-shadow: .5rem 0 .5rem rgba(28, 30, 126, 100%);
     margin: .5rem 0 .2rem;
     padding: 1rem;
-    height: 127px;
+    height: 140px;
 }
 
  .respmenu {
@@ -355,6 +355,9 @@ footer {
     .footer-logo img {
         margin: 1rem;
     }
+    .footer-texto p {
+        margin: 0;
+    }
 } 
     
 /*CONTACTOS.HTML*/
@@ -419,7 +422,7 @@ footer {
     border-radius: 1rem;
 }
 
-
+/* Responsive con 3 puntos de corte para 3 tamaños de dispositivos distintos */
 /*Tablet*/
 @media screen and (max-width: 768px) {
     .hym-principal {
@@ -446,6 +449,15 @@ footer {
     
     .hym-iframe {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-texto {
+        margin: 1rem;
+    }
+    .footer-texto p{
+        font-size: 1.4rem;
     }
 }
 
