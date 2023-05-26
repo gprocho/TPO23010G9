@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/L_Icono_logo_e2.ico" type="image/x-icon">
     <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,7 +26,6 @@
                     <li><a href="paseos.html" class="header-menu">Paseos</a></li>
                     <li><a href="atracciones.html" class="header-menu">Atracciones gratuitas</a></li>
                     <li><a href="historia.html" class="header-menu">Historias y música</a></li>
-                    <li><a href="reservas.html" class="header-menu">Reservas</a></li>
                     <li><a href="contacto.html" class="header-button"><button>Contacto</button></a></li>
                 </ul>
             </nav>
@@ -41,69 +41,89 @@
     </main>
     <!-- Bloques información, varios -->
     <section class="formulario">
-        <h1>Formulario de Reservas</h1>
-        <div class="container">
-            <!--<form action="">-->
-            <form class="row mt-3">
-                <div class="col-12">
-                    <label for="date">Fecha de salida (mm/dd/yyyy): </label>
-                    <input type="date" id="date" class="form-control">
+        <div class="container rows mt-3">
+
+            <!--envia la información al correo BAturismoarg@mail.com Clave:BAturismo23-->
+            <form novalidate id="formulariocont" action="mailto:BAturismoarg@gmail.com" method="post"
+                enctype="text/plain">
+
+                <div class="form mb-3">
+                    <label for="userApellidoContac">Apellido:</label>
+                    <input class="form-control mb-3" name="userApellidoContac" placeholder="Ingrese su apellido..."
+                        autocomplete="off" id="userApellidoContac" type="text" />
                 </div>
-                <form class="row mt-3">
-                    <div class="col-6">
-                        <label for="paseos">Paseos Disponibles: (Select)</label>
-                        <select id="paseos" name="paseos disponibles" class="form-control btn btn-light">
-                            <option value="paseo 0"></option>
-                            <option value="paseo 1">City tour</option>
-                            <option value="paseo 2">Puerto Madero</option>
-                            <option value="paseo 3">Show de Tango</option>
-                            <option value="paseo 4">Canchas de Fútbol</option>
-                        </select>
+                <p class="text-danger mb-3 d-none" id="alertApellidoContac"></p>
+
+                <div class="form mb-3">
+                    <label for="userNameContac">Nombre:</label>
+                    <input class="form-control mb-3" name="userNameContac" placeholder="Ingrese su nombre..."
+                        autocomplete="off" id="userNameContac" type="text" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertNameContac"></p>
+
+                <div class="form mb-3">
+                    <label for="userEmailContac">Correo Electrónico:</label>
+                    <input class="form-control mb-3" name="userEmailContac" placeholder="Ingrese su correo..."
+                        id="userEmailContac" autocomplete="off" type="email" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertEmailContac"></p>
+
+
+                <div class="form mb-3">
+                    <label for="userTelefContac">Teléfono celular (+54 911 1234 1234):</label>
+                    <input class="form-control mb-3" name="userTelefContac"
+                        placeholder="Ingrese su número telefónico..." id="userTelefContac" autocomplete="off"
+                        type="tel" />
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertTelefContac"></p>
+
+                <div class="form mb-3">
+                    <label for="userComentContac">Consulta:</label>
+                    <textarea name="comentarios" rows="6" cols="12" class="form-control"
+                        placeholder="Ingrese su consulta..."></textarea>
+                </div>
+                <p class="text-danger mb-3 d-none" id="alertComentContac"></p>
+
+
+
+                <button type="submit" class="form-control btn btn-primary">Enviar</button>
+                <br>
+                <br>
+
+                <button type="reset" class="btn btn-secondary">Borrar</button>
+
+                <a href="paseos.html" class="button" style="vertical-align:middle">
+                    <span>Volver </span></a>
+
+            </form>
+            <div class="alert alert-success mt-2 d-none" id="alertSuccessContac"></div>
+        </div>
+
+
+        <div class="container rows mt-3 contacto-datos">
+            <div class="grid-p">
+                <div class="bloque-paseos p cont-dym">
+                    <div class="cont-datos">
+                        <a name="Contacto"></a>
+                        <br>
+                        <img class="contacto-logo" src="img/L_logo_e1.png" alt="Logo">
+                        <br>
+                        <p>Av. Córdoba 722 - Ciudad de Buenos Aires</p>
+                        <p>+54 9 11 9999 9999</p>
+                        <p>BAturismoarg@gmail.com</p>
                     </div>
-                    <div class="col-6">
-                        <label for="number">Cantidad de pasajeros:</label>
-                        <input type="number" name="number" class="form-control" placeholder="Ingrese el numero..">
+                    <div id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.407548857194!2d-58.38229524458413!3d-34.59900835724984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacbd5628479%3A0xa61b4128d4507352!2sAv.%20C%C3%B3rdoba%20722%2C%20C1054AAT%20CABA!5e0!3m2!1ses!2sar!4v1685125284567!5m2!1ses!2sar"
+                            width="300" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <form class="row mt-12">
-                        <div class="col-6">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" class="form-control" placeholder="Ingrese su nombre aqui...">
-                        </div>
-                        <div class="col-6">
-                            <label for="apellido">Apellido:</label>
-                            <input type="text" id="apellido" class="form-control"
-                                placeholder="Ingrese su apellido aqui..." style="color: cornflowerblue;">
-                        </div>
-                    </form>
-                    <form class="row mt-3">
-                        <div class="col-6">
-                            <label for="email">Email de contacto:</label>
-                            <input type="text" id="email" class="form-control" placeholder="Ingrese su email aqui...">
-                        </div>
-                        <div class="col-6">
-                            <label for="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" class="form-control"
-                                placeholder="Ingrese su teléfono aqui...">
-                        </div>
-                    </form>
-                    <form class="row mt-3">
-                        <label for="comentarios">Comentarios:</label>
-                        <textarea name="comentarios" rows="5" cols="12" class="form-control"></textarea>
-                    </form>
-                    <form class="row mt-3">
-                        <div class="col-8">
-                            <input type="submit" value="Enviar" class="form-control btn btn-info">
-                        </div>
-                        <div class="col-4">
-                            <button type="reset">Reset</button class="form-control btn btn-secondary">
-                        </div>
-                    </form>
-                    <a href="index.html">Regresar</a>
+                </div>
+            </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-grid">
@@ -133,6 +153,8 @@
         </div>
 
     </footer>
+
+    <script src="js/formulariocont.js"></script>
 
 </body>
 

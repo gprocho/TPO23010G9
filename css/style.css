@@ -363,7 +363,8 @@ footer {
     
 /*CONTACTOS.HTML*/
 .formulario {
-    background-color: rgb(161, 159, 179);
+    /* background-color: rgb(161, 159, 179); */
+    background-color: rgb(252, 240, 230);
     padding: 1rem;
     text-align: center;
 }
@@ -857,3 +858,34 @@ footer {
  }
  
 
+ /* Contacto.html ajustes */
+
+ .contacto-logo {
+    height: 118px;
+    width: auto;
+    transition: all 0.3s;
+    margin-left: 1.2rem;
+    margin-top: .8rem;
+}
+
+.contacto-logo img:hover {
+    transform: scale(1.2);
+}
+
+.cont-dym {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 997px) {
+    .cont-dym {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
