@@ -126,7 +126,7 @@ header {
 }
 
 /*HEADER Media nav*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 898px) {
     .fa-bars, .fa-times {
         display: block;
     }
