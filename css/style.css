@@ -664,6 +664,8 @@ footer {
     text-justify: center;
     font-size: 1rem;
     color: black; 
+    row-gap: 0.5rem; /*probar ajuste 20230706*/
+    padding-bottom: 1rem; /*probar ajuste 20230706*/
 }
 
 .api-clima-title {
